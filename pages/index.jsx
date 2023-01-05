@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { BsMoonStarsFill } from 'react-icons/bs';
@@ -11,6 +12,12 @@ import {
 import profileImage from '../public/dev-ed-wave.png';
 import code from '../public/code.png';
 import consulting from '../public/consulting.png';
+import web1 from '../public/web1.png';
+import web2 from '../public/web2.png';
+import web3 from '../public/web3.png';
+import web4 from '../public/web4.png';
+import web5 from '../public/web5.png';
+import web6 from '../public/web6.png';
 
 export default function Home() {
   return (
@@ -21,7 +28,7 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main className=' bg-white px-10'>
+      <main className=' bg-white px-10 md:px-20 lg:px-40'>
         {/* Top section */}
         <section className='min-h-screen'>
           <nav className='py-10 mb-12 flex justify-between'>
@@ -32,7 +39,7 @@ export default function Home() {
               </li>
               <li>
                 <a
-                  href='#'
+                  href='#portfolio'
                   className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8'
                 >
                   Resume
@@ -41,11 +48,13 @@ export default function Home() {
             </ul>
           </nav>
           <div className='text-center p-10'>
-            <h2 className='text-5xl py-2 text-cyan-500 font-medium'>
+            <h2 className='text-5xl py-2 text-cyan-500 font-medium md:text-6xl'>
               Aya Ogihara
             </h2>
-            <h3 className='text-2xl py-2'>Design focused Frontend Developer</h3>
-            <p className='text-medium py-5 leading-8 text-gray-800'>
+            <h3 className='text-2xl py-2 md:text-3xl'>
+              Design focused Frontend Developer
+            </h3>
+            <p className='text-medium py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto'>
               I enjoy keeping up to date with the evolving changes in the world
               of Frontend Development.
             </p>
@@ -55,7 +64,7 @@ export default function Home() {
             <AiFillLinkedin />
             <AiFillGithub />
           </div>
-          <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden'>
+          <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:w-96 md:h-96'>
             <Image
               src={profileImage}
               alt='Aya'
@@ -66,8 +75,15 @@ export default function Home() {
         </section>
         {/* Service section */}
         <section>
-          <div>
-            <h3 className='text-3xl py-1'>Service</h3>
+          <div className='basis-1/3 flex-1'>
+            <h3
+              className='text-3xl py-1 rounded-lg object-cover'
+              width={'100%'}
+              height={'100%'}
+              layout='responsive'
+            >
+              Service
+            </h3>
             <p className='text-medium py-5 leading-8 text-gray-800'>
               Welcome to my page! I am Aya Ogihara. I am a web developer with a
               background in customer service and I am always open to freelance,
@@ -81,7 +97,7 @@ export default function Home() {
               future.
             </p>
           </div>
-          <div>
+          <div className='lg:flex gap-10'>
             {/* card-1 */}
             <div className='text-center shadow-lg p-10 rounded-lg my-10 flex flex-col items-center '>
               <Image src={consulting} alt='' width={100} height={100} />
@@ -120,6 +136,87 @@ export default function Home() {
               <p className='text-gray-800 py-1'>Photoshop</p>
               <p className='text-gray-800 py-1'>Figma</p>
               <p className='text-gray-800 py-1'>Canva</p>
+            </div>
+          </div>
+        </section>
+        {/* Portfolio */}
+        <section id='portfolio'>
+          <div>
+            <h3 className='text-3xl py-1'>Portfolio</h3>
+            <p className='text-medium py-5 leading-8 text-gray-800'>
+              Welcome to my page! I am Aya Ogihara. I am a web developer with a
+              background in customer service and I am always open to freelance,
+              and collaborating opportunities in Auckland area or remotely.
+            </p>
+            <p className='text-medium py-5 leading-8 text-gray-800'>
+              When I was in Japan, I was a kimono dressmaker and was deeply
+              interested in Japanese tradition. Moving abroad, my interest has
+              shifted from tradition to the future, and I am fascinated by the
+              wonderfulness of technology, which I believe is a symbol of the
+              future.
+            </p>
+          </div>
+
+          <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap '>
+            <div className='basis-1/3 flex-1'>
+              <Image
+                src={web1}
+                alt=''
+                className='rounded-lg object-cover'
+                width={'100%'}
+                height={'100%'}
+                layout='responsive'
+              />
+            </div>
+            <div className='basis-1/3 flex-1'>
+              <Image
+                src={web2}
+                alt=''
+                className='rounded-lg object-cover'
+                width={'100%'}
+                height={'100%'}
+                layout='responsive'
+              />
+            </div>
+            <div className='basis-1/3 flex-1'>
+              <Image
+                src={web3}
+                alt=''
+                className='rounded-lg object-cover'
+                width={'100%'}
+                height={'100%'}
+                layout='responsive'
+              />
+            </div>
+            <div className='basis-1/3 flex-1'>
+              <Image
+                src={web4}
+                alt=''
+                className='rounded-lg object-cover'
+                width={'100%'}
+                height={'100%'}
+                layout='responsive'
+              />
+            </div>
+            <div className='basis-1/3 flex-1'>
+              <Image
+                src={web5}
+                alt=''
+                className='rounded-lg object-cover'
+                width={'100%'}
+                height={'100%'}
+                layout='responsive'
+              />
+            </div>
+            <div className='basis-1/3 flex-1'>
+              <Image
+                src={web6}
+                alt=''
+                className='rounded-lg object-cover'
+                width={'100%'}
+                height={'100%'}
+                layout='responsive'
+              />
             </div>
           </div>
         </section>
