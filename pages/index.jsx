@@ -9,6 +9,8 @@ import {
 
 //image asset
 import profileImage from '../public/dev-ed-wave.png';
+import code from '../public/code.png';
+import consulting from '../public/consulting.png';
 
 export default function Home() {
   return (
@@ -20,6 +22,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main className=' bg-white px-10'>
+        {/* Top section */}
         <section className='min-h-screen'>
           <nav className='py-10 mb-12 flex justify-between'>
             <h1 className='text-xl'>Aya Ogihara</h1>
@@ -59,6 +62,65 @@ export default function Home() {
               layout='fill'
               objectFit='cover'
             />
+          </div>
+        </section>
+        {/* Service section */}
+        <section>
+          <div>
+            <h3 className='text-3xl py-1'>Service</h3>
+            <p className='text-medium py-5 leading-8 text-gray-800'>
+              Welcome to my page! I am Aya Ogihara. I am a web developer with a
+              background in customer service and I am always open to freelance,
+              and collaborating opportunities in Auckland area or remotely.
+            </p>
+            <p className='text-medium py-5 leading-8 text-gray-800'>
+              When I was in Japan, I was a kimono dressmaker and was deeply
+              interested in Japanese tradition. Moving abroad, my interest has
+              shifted from tradition to the future, and I am fascinated by the
+              wonderfulness of technology, which I believe is a symbol of the
+              future.
+            </p>
+          </div>
+          <div>
+            {/* card-1 */}
+            <div className='text-center shadow-lg p-10 rounded-lg my-10 flex flex-col items-center '>
+              <Image src={consulting} alt='' width={100} height={100} />
+              <h3 className='text-lg font-medium pt-8 pb-2'>Designs</h3>
+              <p className='py-2'>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Distinctio corporis ipsum atque.
+              </p>
+              <h4 className='py-4 text-teal-400'>Tools I use</h4>
+              <p className='text-gray-800 py-1'>Photoshop</p>
+              <p className='text-gray-800 py-1'>Figma</p>
+              <p className='text-gray-800 py-1'>Canva</p>
+            </div>
+            {/* card-2 */}
+            <div className='text-center shadow-lg p-10 rounded-lg my-10 flex flex-col items-center '>
+              <Image src={code} alt='' width={100} height={100} />
+              <h3 className='text-lg font-medium pt-8 pb-2'>Designs</h3>
+              <p className='py-2'>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Distinctio corporis ipsum atque.
+              </p>
+              <h4 className='py-4 text-teal-400'>Tools I use</h4>
+              <p className='text-gray-800 py-1'>Photoshop</p>
+              <p className='text-gray-800 py-1'>Figma</p>
+              <p className='text-gray-800 py-1'>Canva</p>
+            </div>
+            {/* card-3 */}
+            <div className='text-center shadow-lg p-10 rounded-lg my-10 flex flex-col items-center '>
+              <Image src={consulting} alt='' width={100} height={100} />
+              <h3 className='text-lg font-medium pt-8 pb-2'>Designs</h3>
+              <p className='py-2'>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Distinctio corporis ipsum atque.
+              </p>
+              <h4 className='py-4 text-teal-400'>Tools I use</h4>
+              <p className='text-gray-800 py-1'>Photoshop</p>
+              <p className='text-gray-800 py-1'>Figma</p>
+              <p className='text-gray-800 py-1'>Canva</p>
+            </div>
           </div>
         </section>
       </main>
