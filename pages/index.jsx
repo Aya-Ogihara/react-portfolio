@@ -225,6 +225,11 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <footer className=' bg-cyan-500 text-white text-center py-3'>
+        <p className='text-sm'>
+          Copyright © {new Date().getFullYear()} Aya Ogihara. All right reserved
+        </p>
+      </footer>
     </div>
   );
 }
