@@ -9,7 +9,7 @@ import {
 } from 'react-icons/ai';
 
 //image asset
-import profileImage from '../public/dev-ed-wave.png';
+import profileImage from '../public/aya.png';
 import code from '../public/code.png';
 import consulting from '../public/consulting.png';
 import web1 from '../public/web1.png';
